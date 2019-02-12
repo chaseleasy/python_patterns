@@ -39,7 +39,7 @@ class factory():
         }
 
     def get_node(self, x):
-        return self.handlers.get(x, lambda n: return None)()
+        return self.handlers.get(x, lambda n: return None)(x)
 
 
 if __name__ == '__main__':
