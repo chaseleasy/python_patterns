@@ -45,6 +45,6 @@ def if_http_ftp(url):
 
 
 if __name__ == '__main__':
-    conn_api = if_http_ftp('https://yirenfang.app/file.json')
+    conn_api = if_http_ftp('https://www.baidu.com/file.json')
     data = conn_api.parse_data()
     print(data)
