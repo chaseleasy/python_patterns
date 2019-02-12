@@ -44,5 +44,5 @@ class FileOpenFail(Exception):
 
 
 if __name__ == '__main__':
-    download_api = DownloadHttpFile(url='https://yirenfang.app/file.json')
+    download_api = DownloadHttpFile(url='https://baidu.com/file.json')
     print(download_api.return_path())
