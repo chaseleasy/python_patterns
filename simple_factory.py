@@ -32,16 +32,14 @@ class node3(master):
 
 class factory():
     def __init__(self):
-        pass
+        self.handers = {
+            'node1': node1,
+            'node2': node2,
+            'node3': node3
+        }
 
     def get_node(self, x):
-        if x == 'node1':
-            x = node1()
-        elif x == 'node2':
-            x = node2()
-        elif x == 'node3':
-            x = node3()
-        return x
+        return self.handlers.get(x, lambda n: return None)()
 
 
 if __name__ == '__main__':
