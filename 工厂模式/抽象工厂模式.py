@@ -28,7 +28,7 @@ class Factory(object):
         pass
 
 
-class Factory_init(Factory):
+class FactoryInit(Factory):
     def get_factory_name(self):
         return self.factory_name
 
@@ -77,13 +77,13 @@ class ProductKeyborad(Product):
 
 
 # 惠普工厂
-class FactoryHP(Factory_init):
+class FactoryHP(FactoryInit):
     def __init__(self):
         super().__init__(factory_name='HP')
 
 
 # 华硕工厂
-class FactoryASUS(Factory_init):
+class FactoryASUS(FactoryInit):
     def __init__(self):
         super().__init__(factory_name='ASUS')
 
