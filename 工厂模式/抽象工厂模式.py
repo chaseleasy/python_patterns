@@ -57,23 +57,24 @@ class Product(object):
     def get_product_firm(self):
         return self.product_firm if self.product_firm else None
 
+# 产品类初始化 减少冗余代码    
+
+class ProductInit(Product):
+    def get_product_type(self):
+        return self.product_type
+
 
 # 鼠标产品
-class ProductMouse(Product):
+class ProductMouse(ProductInit):
     def __init__(self, product_firm):
         super().__init__(product_type='Mouse', product_firm=product_firm)
 
-    def get_product_type(self):
-        return self.product_type
-
 
 # 键盘产品
-class ProductKeyborad(Product):
+class ProductKeyborad(ProductInit):
     def __init__(self, product_firm):
         super().__init__(product_type='Keyborad', product_firm=product_firm)
 
-    def get_product_type(self):
-        return self.product_type
 
 
 # 惠普工厂
