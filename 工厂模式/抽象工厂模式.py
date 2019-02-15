@@ -67,6 +67,18 @@ class FactoryHP(Factory):
     def __init__(self):
         super().__init__(factory_name='HP')
 
+    def get_factory_name(self):
+        return self.factory_name
+
+    def get_factory_product(self):
+        return [self.return_keyborad_product(), self.return_mouse_product()]
+
+    def return_mouse_product(self):
+        return ProductMouse(product_firm='HP')
+
+    def return_keyborad_product(self):
+        return ProductKeyborad(product_firm='HP')
+
 
 # 华硕工厂
 class FactoryASUS(Factory):
