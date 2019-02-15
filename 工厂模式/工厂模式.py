@@ -22,6 +22,14 @@ class Product(object):
         pass
 
 
+class ProductInit(Product):
+    def get_factory_name(self):
+        return self.factory
+
+    def get_factory_type(self):
+        return self.type
+
+
 # 工厂父类
 class Factory(object):
     def __init__(self):
@@ -32,39 +40,21 @@ class Factory(object):
 
 
 # 产品实例化 HP
-class ProductHP(Product):
+class ProductHP(ProductInit):
     def __init__(self):
         super().__init__(factory='HP', type='鼠标')
 
-    def get_factory_name(self):
-        return self.factory
-
-    def get_factory_type(self):
-        return self.type
-
 
 # 产品实例化 ASUS
-class ProductASUS(Product):
+class ProductASUS(ProductInit):
     def __init__(self):
         super().__init__(factory='ASUS', type='鼠标')
 
-    def get_factory_name(self):
-        return self.factory
-
-    def get_factory_type(self):
-        return self.type
-
 
 # 产品实例化 ShenZhou
-class ProductShenZhou(Product):
+class ProductShenZhou(ProductInit):
     def __init__(self):
         super().__init__(factory='ShenZhou', type='鼠标')
-
-    def get_factory_name(self):
-        return self.factory
-
-    def get_factory_type(self):
-        return self.type
 
 
 # HP工厂类 继承
